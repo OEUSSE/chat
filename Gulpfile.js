@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 
 var sass = require('gulp-sass')
-var renanme = require('gulp-rename')
+var rename = require('gulp-rename')
 
 var browserify = require('browserify')
 var babel = require('babelify')
@@ -10,7 +10,7 @@ var source = require('vinyl-source-stream')
 gulp.task('styles', function () {
   return gulp.src('./*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(renanme('chat.css'))
+    .pipe(rename('chat.css'))
     .pipe(gulp.dest('public'))
 })
 
@@ -19,7 +19,7 @@ gulp.task('scripts', function () {
     .transform(babel)
     .bundle()
     .pipe(source('index.js'))
-    .pipe(renanme('chat.js'))
+    .pipe(rename('chat.js'))
     .pipe(gulp.dest('public'))
 })
 
