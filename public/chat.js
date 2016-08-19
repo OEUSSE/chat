@@ -6,9 +6,11 @@ var form = document.getElementById('form');
 
 form.addEventListener('submit', function (ev) {
   ev.preventDefault();
+
   let message = document.getElementById('m');
 
   if (message.value === '') return false;
+
   socket.emit('chat message', message.value);
   message.value = "";
   return false;
@@ -22,6 +24,11 @@ socket.on('chat message', function (msg) {
   let messages = document.getElementById('messages');
   message.appendChild(span);
   messages.appendChild(message);
+
+  /*let scrollH = messages.scrollHeight
+  messages.scrollTop = scrollH*/
+
+  messages.scrollTop = messages.scrollHeight;
 });
 
 },{"socket.io-client":3}],2:[function(require,module,exports){

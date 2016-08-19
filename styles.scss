@@ -40,7 +40,6 @@ body {
       background-image: url('./images/send.png');
       background-position: center;
       background-size: cover;
-      /* background: rgb(130, 224, 255); */
       border: none;
       border-radius: 50%;
       cursor: pointer;
@@ -79,6 +78,21 @@ body {
         padding: 7px;
         text-align: left;
       }
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: transparent;
     }
   }
 }
