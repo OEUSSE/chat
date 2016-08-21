@@ -1,1 +1,8 @@
-A simple chat with socke.io
+# A simple chat with socket.io
+
+## Usage
+
+```
+$ npm install
+$ npm start
+```
