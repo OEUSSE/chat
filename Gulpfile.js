@@ -23,4 +23,12 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('public'))
 })
 
-gulp.task('default', [ 'styles', 'scripts' ])
+gulp.task('sCamera', function () {
+  browserify('./lib/camera.js')
+    .transform(babel)
+    .bundle()
+    .pipe(source('camera.js'))
+    .pipe(gulp.dest('public'))
+})
+
+gulp.task('default', [ 'styles', 'scripts', 'sCamera' ])

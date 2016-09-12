@@ -10,7 +10,8 @@
   "author": "Óscar Eusse Flórez <scr.eusse@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "pug": "^2.0.0-beta5"
+    "pug": "^2.0.0-beta5",
+    "webcamjs": "^1.0.15"
   },
   "devDependencies": {
     "babelify": "^7.3.0",

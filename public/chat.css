@@ -29,7 +29,9 @@ body {
       color: #464040;
       outline: none;
       padding: 10px;
-      width: 90.7%; }
+      margin-left: 39px;
+      width: 720px;
+      /*width: 90.7%;*/ }
     .chat-container #form button {
       background-image: url("./images/send.png");
       background-position: center;
@@ -38,11 +40,18 @@ body {
       border-radius: 50%;
       cursor: pointer;
       height: 32px;
-      margin-left: 18px;
+      /*margin-left: 18px;*/
       outline: none;
       padding: 10px;
-      position: absolute;
+      /*position: absolute;*/
       width: 31px; }
+    .chat-container #form a#o-camera {
+      background-image: url("./images/camera.png");
+      cursor: pointer;
+      height: 32px;
+      left: 4px;
+      position: absolute;
+      width: 32px; }
   .chat-container #messages {
     list-style-type: none;
     height: 93%;
@@ -54,16 +63,16 @@ body {
     .chat-container #messages li {
       float: right;
       height: auto;
-      padding: 5px 10px;
       margin: 10px 5px 10px 0;
+      padding: 5px 10px;
       text-align: right;
       width: 100%; }
       .chat-container #messages li span {
-        width: auto;
         border-radius: 5px;
         background: white;
         padding: 7px;
-        text-align: left; }
+        text-align: left;
+        width: auto; }
     .chat-container #messages::-webkit-scrollbar-track {
       border-radius: 10px;
       background-color: transparent; }
@@ -73,3 +82,35 @@ body {
     .chat-container #messages::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: transparent; }
+
+.modal-trigger {
+  background-color: white;
+  border-radius: 5px;
+  display: none;
+  height: 430px;
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  width: 870px;
+  z-index: 10; }
+  .modal-trigger #close-modal {
+    background-image: url("./images/close.png");
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 820px;
+    height: 32px;
+    width: 32px;
+    z-index: 10; }
+  .modal-trigger #my_camera {
+    height: 80%;
+    margin: 10px auto;
+    width: 70%;
+    z-index: 20; }
+  .modal-trigger #my_result {
+    border: 1px solid black;
+    display: none;
+    height: 240px;
+    margin: 10px auto;
+    width: 320px;
+    z-index: 30; }

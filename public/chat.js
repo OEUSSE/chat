@@ -4,7 +4,7 @@ var socket = io();
 
 var form = document.getElementById('form');
 
-form.addEventListener('submit', function (ev) {
+form.addEventListener('submit', ev => {
   ev.preventDefault();
 
   let message = document.getElementById('m');
@@ -24,9 +24,6 @@ socket.on('chat message', function (msg) {
   let messages = document.getElementById('messages');
   message.appendChild(span);
   messages.appendChild(message);
-
-  /*let scrollH = messages.scrollHeight
-  messages.scrollTop = scrollH*/
 
   messages.scrollTop = messages.scrollHeight;
 });

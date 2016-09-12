@@ -3,13 +3,19 @@ html(lang='es')
   head
     title Chat
     link(rel='stylesheet' href='chat.css')
-    <!--meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scable=no')-->
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scable=no')
     meta(charset='utf-8')
   body
     .chat-container
       ul#messages
       form#form(action='')
         input#m(autocomplete='off')
+        a#o-camera
         button
+    .modal-trigger
+      span#close-modal
+      #my_camera
+      #my_result
 
     script(src='chat.js')
+    script(src='camera.js')
