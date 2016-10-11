@@ -30,8 +30,7 @@ body {
       outline: none;
       padding: 10px;
       margin-left: 39px;
-      width: 720px;
-      /*width: 90.7%;*/ }
+      width: 720px; }
     .chat-container #form button {
       background-image: url("./images/send.png");
       background-position: center;
@@ -40,10 +39,8 @@ body {
       border-radius: 50%;
       cursor: pointer;
       height: 32px;
-      /*margin-left: 18px;*/
       outline: none;
       padding: 10px;
-      /*position: absolute;*/
       width: 31px; }
     .chat-container #form a#o-camera {
       background-image: url("./images/camera.png");
@@ -107,10 +104,51 @@ body {
     margin: 10px auto;
     width: 70%;
     z-index: 20; }
+  .modal-trigger .control_container {
+    height: 50px;
+    margin: 5px auto;
+    position: relative;
+    width: 460px; }
+    .modal-trigger .control_container .btn {
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+      display: block;
+      height: 36px;
+      width: 90px; }
+    .modal-trigger .control_container #snap_button {
+      background-color: skyblue;
+      background-image: url("./images/snap.png");
+      margin: auto; }
+    .modal-trigger .control_container #send_button {
+      background-color: lightgreen;
+      background-image: url("./images/send-photo.png");
+      display: none;
+      top: 0;
+      left: 90px;
+      position: absolute; }
+    .modal-trigger .control_container #delete_button {
+      background-color: salmon;
+      background-image: url("./images/delete.png");
+      display: none;
+      position: absolute;
+      left: 280px;
+      top: 0; }
   .modal-trigger #my_result {
     border: 1px solid black;
     display: none;
-    height: 240px;
+    height: 344px;
     margin: 10px auto;
-    width: 320px;
+    width: 609px;
     z-index: 30; }
+
+#bloq-page {
+  background: rgba(0, 0, 0, 0.72);
+  display: none;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5; }

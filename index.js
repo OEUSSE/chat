@@ -28,8 +28,11 @@ io.on('connection', function (socket) {
   })
 
   socket.on('chat message', function (msg) {
-    debugger
     io.emit('chat message', msg)
+  })
+
+  socket.on('snap', function (imgSrc) {
+    io.emit('snap', imgSrc)
   })
 })
 
