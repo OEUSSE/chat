@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "start": "npm run build && node index.js"
+    "serve": "nodemon index.js",
+    "start": "npm run build"
   },
   "author": "Óscar Eusse Flórez <scr.eusse@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.15.2",
     "pug": "^2.0.0-beta5",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3",
     "webcamjs": "^1.0.15"
   },
   "devDependencies": {

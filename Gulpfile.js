@@ -1,11 +1,11 @@
-var gulp = require('gulp')
+const gulp = require('gulp')
 
-var sass = require('gulp-sass')
-var rename = require('gulp-rename')
+const sass = require('gulp-sass')
+const rename = require('gulp-rename')
 
-var browserify = require('browserify')
-var babel = require('babelify')
-var source = require('vinyl-source-stream')
+const browserify = require('browserify')
+const babel = require('babelify')
+const source = require('vinyl-source-stream')
 
 gulp.task('styles', function () {
   return gulp.src('./*.scss')
@@ -31,4 +31,9 @@ gulp.task('sCamera', function () {
     .pipe(gulp.dest('public'))
 })
 
-gulp.task('default', [ 'styles', 'scripts', 'sCamera' ])
+gulp.task('watch', function () {
+  gulp.watch('./*.scss', [ 'styles' ])
+  gulp.watch('./lib/*.js', [ 'scripts', 'sCamera' ])
+})
+
+gulp.task('default', [ 'styles', 'scripts', 'sCamera', 'watch' ])

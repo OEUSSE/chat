@@ -13,9 +13,7 @@ app.set('view engine', 'pug')
 app.use(express.static('public'))
 
 app.use('*', (req, res) => {
-  //app.get('/', (req, res) => {
     res.render('index')
-  //})
 })
 
 io.on('connection', function (socket) {
