@@ -1,10 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var Webcam = require('webcamjs');
-var io = require('socket.io-client');
-var socket = io();
+const Webcam = require('webcamjs');
+const io = require('socket.io-client');
+const socket = io();
 
-var modal = document.querySelector('.modal-trigger');
-var bloq = document.querySelector('#bloq-page');
+const modal = document.querySelector('.modal-trigger');
+const bloq = document.querySelector('#bloq-page');
 
 function open_modal() {
   modal.style.display = 'block';
@@ -12,6 +12,12 @@ function open_modal() {
 
   showElements(true);
 
+  Webcam.set({
+    jpeg_quelity: 90,
+    image_format: 'jpeg',
+    height: 240,
+    width: 320
+  });
   Webcam.attach('#my_camera');
 }
 
@@ -19,7 +25,7 @@ function take_snapshot() {
   showElements(false);
 
   Webcam.snap(function (data_uri) {
-    document.getElementById('my_result').innerHTML = '<img id="image_snap" src="' + data_uri + '"/>';
+    document.getElementById('my_result').innerHTML = `<img id="image_snap" src="'${data_uri}'"/>`;
   });
 }
 
@@ -57,12 +63,12 @@ function close_modal() {
   Webcam.reset();
 }
 
-document.getElementById('o-camera').addEventListener('click', open_modal, false);
-document.getElementById('close-modal').addEventListener('click', close_modal, false);
+document.getElementById('o-camera').addEventListener('click', open_modal);
+document.getElementById('close-modal').addEventListener('click', close_modal);
 
-document.getElementById('snap_button').addEventListener('click', take_snapshot, false);
-document.getElementById('send_button').addEventListener('click', send_file, false);
-document.getElementById('delete_button').addEventListener('click', delete_file, false);
+document.getElementById('snap_button').addEventListener('click', take_snapshot);
+document.getElementById('send_button').addEventListener('click', send_file);
+document.getElementById('delete_button').addEventListener('click', delete_file);
 
 },{"socket.io-client":35,"webcamjs":51}],2:[function(require,module,exports){
 module.exports = after

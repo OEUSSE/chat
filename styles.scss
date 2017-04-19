@@ -81,7 +81,7 @@ body {
       width: 100%;
 
       span {
-        border-radius: 5px;
+        border-radius: 13px 13px 0 13px;
         background: white;
         padding: 7px;
         text-align: left;
@@ -119,11 +119,13 @@ body {
 
   #close-modal {
     background-image: url('./images/close.png');
+    border: none;
     cursor: pointer;
     position: absolute;
     top: 10px;
     left: 820px;
     height: 32px;
+    outline: none;
     width: 32px;
     z-index: 10;
   }
@@ -144,12 +146,21 @@ body {
     .btn {
       background-repeat: no-repeat;
       background-position: center;
+      border: none;
       border-radius: 3px;
       color: white;
       cursor: pointer;
       display: block;
       height: 36px;
+      outline: none;
       width: 90px;
+    }
+
+    #snap_button,
+    #send_button,
+    #delete_button {
+      border: none;
+      outline: none;
     }
 
     #snap_button {

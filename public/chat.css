@@ -66,7 +66,7 @@ body {
       text-align: right;
       width: 100%; }
       .chat-container #messages li span {
-        border-radius: 5px;
+        border-radius: 13px 13px 0 13px;
         background: white;
         padding: 7px;
         text-align: left;
@@ -93,11 +93,13 @@ body {
   z-index: 10; }
   .modal-trigger #close-modal {
     background-image: url("./images/close.png");
+    border: none;
     cursor: pointer;
     position: absolute;
     top: 10px;
     left: 820px;
     height: 32px;
+    outline: none;
     width: 32px;
     z-index: 10; }
   .modal-trigger #my_camera {
@@ -113,12 +115,19 @@ body {
     .modal-trigger .control_container .btn {
       background-repeat: no-repeat;
       background-position: center;
+      border: none;
       border-radius: 3px;
       color: white;
       cursor: pointer;
       display: block;
       height: 36px;
+      outline: none;
       width: 90px; }
+    .modal-trigger .control_container #snap_button,
+    .modal-trigger .control_container #send_button,
+    .modal-trigger .control_container #delete_button {
+      border: none;
+      outline: none; }
     .modal-trigger .control_container #snap_button {
       background-color: skyblue;
       background-image: url("./images/snap.png");
